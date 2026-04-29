@@ -1,0 +1,16 @@
+/* Admin settings screen. */
+.gaa-admin-title {
+    color: #2271b1;
+}
+
+.gaa-form-row {
+    margin-bottom: 12px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: fit-content;
+}
+
+.gaa-form-row p {
+    padding-bottom: 10px;
+}

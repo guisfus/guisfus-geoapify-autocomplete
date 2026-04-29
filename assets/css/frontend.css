@@ -1,0 +1,31 @@
+/* Frontend autocomplete dropdown. */
+.gaa-dropdown {
+	background: #fff;
+	border: 1px solid rgba(0,0,0,.15);
+	border-top: 0;
+	max-height: 240px;
+	overflow-y: auto;
+	display: none;
+	box-shadow: 0 8px 20px rgba(0,0,0,.08);
+	border-radius: 0 0 8px 8px;
+	-webkit-transform: translateZ(0);
+}
+
+.gaa-item {
+	padding: 10px 12px;
+	cursor: pointer;
+	line-height: 1.2;
+}
+
+.gaa-item:hover,
+.gaa-item.active {
+	background: rgba(0,0,0,.05);
+}
+
+.gaa-status {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
