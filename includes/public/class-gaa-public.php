@@ -2,7 +2,7 @@
 /**
  * Frontend asset loading.
  *
- * @package GuisFusGeoapifyAutocomplete
+ * @package GuisfusGeoapifyAutocomplete
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -80,6 +80,6 @@ final class GAA_Public {
 			$settings
 		);
 
-		wp_localize_script( 'guisfus-geoapify-autocomplete-frontend', 'GuisFusGeoapifyAutocomplete', $config );
+		wp_localize_script( 'guisfus-geoapify-autocomplete-frontend', 'GuisfusGeoapifyAutocomplete', $config );
 	}
 }

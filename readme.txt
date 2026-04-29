@@ -1,4 +1,4 @@
-=== GuisFus Geoapify Autocomplete ===
+=== Guisfus Geoapify Autocomplete ===
 Contributors: guisfus
 Tags: address, autocomplete, geoapify, forms, geocoding
 Requires at least: 5.8
@@ -12,7 +12,7 @@ Adds Geoapify-powered address autocomplete to WordPress forms and fills city, st
 
 == Description ==
 
-GuisFus Geoapify Autocomplete adds address suggestions to existing WordPress forms without requiring a specific form plugin.
+Guisfus Geoapify Autocomplete adds address suggestions to existing WordPress forms without requiring a specific form plugin.
 
 It works with form builders and plain HTML forms as long as the address field can be identified by an ID or by data attributes.
 
@@ -29,7 +29,7 @@ Features:
 
 1. Upload the `guisfus-geoapify-autocomplete` folder to `/wp-content/plugins/`.
 2. Activate the plugin from the WordPress Plugins screen.
-3. Go to Settings > GuisFus Geoapify.
+3. Go to Settings > Guisfus Geoapify.
 4. Enter your Geoapify API key.
 5. Restrict the API key by HTTP referrer in Geoapify before using it in production.
 

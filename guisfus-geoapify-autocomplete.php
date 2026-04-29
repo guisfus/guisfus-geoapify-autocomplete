@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       GuisFus Geoapify Autocomplete
+ * Plugin Name:       Guisfus Geoapify Autocomplete
  * Plugin URI:        https://github.com/guisfus/guisfus-geoapify-autocomplete
  * Description:       Adds Geoapify-powered address autocomplete to WordPress forms and fills city, state and postal code fields automatically.
  * Version:           1.0.0
@@ -13,7 +13,7 @@
  * Text Domain:       guisfus-geoapify-autocomplete
  * Domain Path:       /languages
  *
- * @package GuisFusGeoapifyAutocomplete
+ * @package GuisfusGeoapifyAutocomplete
  */
 
 defined( 'ABSPATH' ) || exit;

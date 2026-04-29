@@ -2,7 +2,7 @@
 /**
  * Plugin settings storage and sanitization.
  *
- * @package GuisFusGeoapifyAutocomplete
+ * @package GuisfusGeoapifyAutocomplete
  */
 
 defined( 'ABSPATH' ) || exit;

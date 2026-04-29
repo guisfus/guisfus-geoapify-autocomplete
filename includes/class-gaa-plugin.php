@@ -2,7 +2,7 @@
 /**
  * Main plugin bootstrap.
  *
- * @package GuisFusGeoapifyAutocomplete
+ * @package GuisfusGeoapifyAutocomplete
  */
 
 defined( 'ABSPATH' ) || exit;

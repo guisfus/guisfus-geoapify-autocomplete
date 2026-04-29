@@ -2,7 +2,7 @@
 /**
  * Admin settings screen.
  *
- * @package GuisFusGeoapifyAutocomplete
+ * @package GuisfusGeoapifyAutocomplete
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -47,8 +47,8 @@ final class GAA_Admin {
 	 */
 	public function add_settings_page() {
 		add_options_page(
-			__( 'GuisFus Geoapify Autocomplete', 'guisfus-geoapify-autocomplete' ),
-			__( 'GuisFus Geoapify', 'guisfus-geoapify-autocomplete' ),
+			__( 'Guisfus Geoapify Autocomplete', 'guisfus-geoapify-autocomplete' ),
+			__( 'Guisfus Geoapify', 'guisfus-geoapify-autocomplete' ),
 			'manage_options',
 			'guisfus-geoapify-autocomplete',
 			array( $this, 'render_settings_page' )
@@ -102,7 +102,7 @@ final class GAA_Admin {
 
 		wp_localize_script(
 			'guisfus-geoapify-autocomplete-admin',
-			'GuisFusGeoapifyAutocompleteAdmin',
+			'GuisfusGeoapifyAutocompleteAdmin',
 			array(
 				'optionKey' => GAA_Settings::OPTION_KEY,
 				'i18n'      => array(
@@ -133,7 +133,7 @@ final class GAA_Admin {
 		$docs_url     = add_query_arg( array( 'page' => 'guisfus-geoapify-autocomplete', 'tab' => 'docs' ), admin_url( 'options-general.php' ) );
 		?>
 		<div class="wrap">
-			<h1 class="gaa-admin-title"><?php esc_html_e( 'GuisFus Geoapify Autocomplete', 'guisfus-geoapify-autocomplete' ); ?></h1>
+			<h1 class="gaa-admin-title"><?php esc_html_e( 'Guisfus Geoapify Autocomplete', 'guisfus-geoapify-autocomplete' ); ?></h1>
 
 			<h2 class="nav-tab-wrapper">
 				<a href="<?php echo esc_url( $settings_url ); ?>" class="nav-tab <?php echo 'settings' === $tab ? 'nav-tab-active' : ''; ?>">

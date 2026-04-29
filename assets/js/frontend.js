@@ -2,7 +2,7 @@
  * Frontend address autocomplete powered by Geoapify.
  */
 (function () {
-  const cfg = window.GuisFusGeoapifyAutocomplete;
+  const cfg = window.GuisfusGeoapifyAutocomplete;
   if (!cfg || !cfg.apiKey) return;
 
   const i18n = cfg.i18n || {};

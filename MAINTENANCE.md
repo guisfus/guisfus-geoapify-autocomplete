@@ -6,7 +6,7 @@ This document highlights the parts of the plugin that are most likely to need at
 
 - Admin PHP: `includes/admin/class-gaa-admin.php` registers the settings page and stores all settings in one serialized option.
 - Settings PHP: `includes/class-gaa-settings.php` owns defaults and sanitization.
-- Frontend PHP: `includes/public/class-gaa-public.php` enqueues assets and exposes `window.GuisFusGeoapifyAutocomplete`.
+- Frontend PHP: `includes/public/class-gaa-public.php` enqueues assets and exposes `window.GuisfusGeoapifyAutocomplete`.
 - Frontend JS: `assets/js/frontend.js` finds mapped address fields, calls Geoapify and renders the dropdown.
 
 ## Geoapify Response Mapping
