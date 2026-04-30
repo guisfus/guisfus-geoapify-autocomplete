@@ -19,11 +19,47 @@ A lightweight WordPress plugin that adds Geoapify-powered address autocomplete t
 
 ## Installation
 
-1. Upload the plugin folder to `/wp-content/plugins/geoapify-autocomplete`.
-2. Activate **Geoapify Autocomplete** in WordPress.
-3. Go to **Settings > Geoapify**.
-4. Add your Geoapify API key.
-5. Restrict the API key by HTTP referrer/domain in Geoapify before using it in production.
+The GitHub repository uses the `wp-` prefix only to identify it as a WordPress plugin repository. When installing the plugin in WordPress, use the plugin folder name without the `wp-` prefix.
+
+Correct plugin folder:
+
+```txt
+wp-content/plugins/geoapify-autocomplete/
+```
+
+Correct ZIP structure:
+
+```txt
+geoapify-autocomplete.zip
+`-- geoapify-autocomplete/
+    |-- geoapify-autocomplete.php
+    |-- includes/
+    |-- assets/
+    |-- README.md
+    `-- readme.txt
+```
+
+Do not install it as:
+
+```txt
+wp-content/plugins/wp-geoapify-autocomplete/
+```
+
+Backend installation:
+
+1. Create a ZIP with `geoapify-autocomplete/` as the root folder.
+2. In WordPress, go to **Plugins > Add New > Upload Plugin**.
+3. Upload `geoapify-autocomplete.zip`.
+4. Activate **Geoapify Autocomplete**.
+5. Go to **Settings > Geoapify**.
+6. Add your Geoapify API key.
+7. Restrict the API key by HTTP referrer/domain in Geoapify before using it in production.
+
+Manual installation:
+
+1. Upload the `geoapify-autocomplete` folder to `wp-content/plugins/`.
+2. Activate **Geoapify Autocomplete** from the WordPress plugins screen.
+3. Go to **Settings > Geoapify** and configure your API key.
 
 ## Usage
 

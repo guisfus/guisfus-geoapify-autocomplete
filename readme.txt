@@ -29,11 +29,29 @@ Features:
 
 == Installation ==
 
+The GitHub repository uses the `wp-` prefix only to identify it as a WordPress plugin repository. When installing the plugin in WordPress, use the plugin folder name without the `wp-` prefix.
+
+Correct plugin folder: `/wp-content/plugins/geoapify-autocomplete/`
+
+Correct ZIP structure: `geoapify-autocomplete.zip` containing a root `geoapify-autocomplete/` folder with `geoapify-autocomplete.php` inside it.
+
+Do not install it as `/wp-content/plugins/wp-geoapify-autocomplete/`.
+
+Backend installation:
+
+1. Create a ZIP with `geoapify-autocomplete/` as the root folder.
+2. Go to Plugins > Add New > Upload Plugin.
+3. Upload `geoapify-autocomplete.zip`.
+4. Activate Geoapify Autocomplete.
+5. Go to Settings > Geoapify.
+6. Enter your Geoapify API key.
+7. Restrict the API key by HTTP referrer/domain in Geoapify before using it in production.
+
+Manual installation:
+
 1. Upload the `geoapify-autocomplete` folder to `/wp-content/plugins/`.
-2. Activate the plugin from the WordPress Plugins screen.
-3. Go to Settings > Geoapify.
-4. Enter your Geoapify API key.
-5. Restrict the API key by HTTP referrer in Geoapify before using it in production.
+2. Activate Geoapify Autocomplete from the WordPress plugins screen.
+3. Go to Settings > Geoapify and configure your API key.
 
 == Usage ==
 
