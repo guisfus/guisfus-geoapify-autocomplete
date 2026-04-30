@@ -3,11 +3,12 @@
  * Plugin Name:       Geoapify Autocomplete
  * Plugin URI:        https://github.com/guisfus/wp-geoapify-autocomplete
  * Description:       Adds Geoapify-powered address autocomplete to WordPress forms and fills city, state and postal code fields automatically.
- * Version:           1.0.0
+ * Version:           1.1.1
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Author:            guisfus
  * Author URI:        https://github.com/guisfus
+ * Update URI:        false
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       geoapify-autocomplete
@@ -18,7 +19,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'GEOAPIFY_AUTOCOMPLETE_VERSION', '1.0.0' );
+define( 'GEOAPIFY_AUTOCOMPLETE_VERSION', '1.1.1' );
 define( 'GEOAPIFY_AUTOCOMPLETE_FILE', __FILE__ );
 define( 'GEOAPIFY_AUTOCOMPLETE_PATH', plugin_dir_path( __FILE__ ) );
 define( 'GEOAPIFY_AUTOCOMPLETE_URL', plugin_dir_url( __FILE__ ) );

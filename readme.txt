@@ -4,7 +4,7 @@ Tags: address, autocomplete, geoapify, forms, geocoding
 Requires at least: 5.8
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.1.1
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -96,6 +96,10 @@ Frontend assets load only when an API key is configured, and requests are only m
 No. Browser-based autocomplete requires the key to be available client-side. Restrict it by allowed HTTP referrers/domains in Geoapify.
 
 == Changelog ==
+
+= 1.1.1 =
+
+Prevent WordPress.org update collisions with a custom update URI.
 
 = 1.0.0 =
 
