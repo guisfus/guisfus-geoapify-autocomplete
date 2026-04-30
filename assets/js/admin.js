@@ -2,7 +2,7 @@
  * Admin settings helpers for dynamic field mappings.
  */
 (function () {
-  const cfg = window.GuisfusGeoapifyAutocompleteAdmin;
+  const cfg = window.GeoapifyAutocompleteAdminConfig;
   if (!cfg || !cfg.optionKey) return;
 
   const wrap = document.getElementById("gaa-forms");

@@ -2,7 +2,7 @@
 /**
  * Frontend asset loading.
  *
- * @package GuisfusGeoapifyAutocomplete
+ * @package GeoapifyAutocomplete
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -38,17 +38,17 @@ final class GAA_Public {
 		}
 
 		wp_enqueue_style(
-			'guisfus-geoapify-autocomplete-frontend',
-			GUISFUS_GEOAPIFY_AUTOCOMPLETE_URL . 'assets/css/frontend.css',
+			'geoapify-autocomplete-frontend',
+			GEOAPIFY_AUTOCOMPLETE_URL . 'assets/css/frontend.css',
 			array(),
-			GUISFUS_GEOAPIFY_AUTOCOMPLETE_VERSION
+			GEOAPIFY_AUTOCOMPLETE_VERSION
 		);
 
 		wp_enqueue_script(
-			'guisfus-geoapify-autocomplete-frontend',
-			GUISFUS_GEOAPIFY_AUTOCOMPLETE_URL . 'assets/js/frontend.js',
+			'geoapify-autocomplete-frontend',
+			GEOAPIFY_AUTOCOMPLETE_URL . 'assets/js/frontend.js',
 			array(),
-			GUISFUS_GEOAPIFY_AUTOCOMPLETE_VERSION,
+			GEOAPIFY_AUTOCOMPLETE_VERSION,
 			true
 		);
 
@@ -63,7 +63,7 @@ final class GAA_Public {
 		 * @param array<string,mixed> $settings Normalized plugin settings.
 		 */
 		$config = apply_filters(
-			'guisfus_geoapify_autocomplete_public_config',
+			'geoapify_autocomplete_public_config',
 			array(
 				'apiKey'      => $settings['api_key'],
 				'countryCode' => $settings['country_code'],
@@ -72,14 +72,14 @@ final class GAA_Public {
 				'limit'       => (int) $settings['limit'],
 				'forms'       => $settings['forms'],
 				'i18n'        => array(
-					'loading'   => __( 'Searching addresses...', 'guisfus-geoapify-autocomplete' ),
-					'noResults' => __( 'No addresses found.', 'guisfus-geoapify-autocomplete' ),
-					'available' => __( 'results available.', 'guisfus-geoapify-autocomplete' ),
+					'loading'   => __( 'Searching addresses...', 'geoapify-autocomplete' ),
+					'noResults' => __( 'No addresses found.', 'geoapify-autocomplete' ),
+					'available' => __( 'results available.', 'geoapify-autocomplete' ),
 				),
 			),
 			$settings
 		);
 
-		wp_localize_script( 'guisfus-geoapify-autocomplete-frontend', 'GuisfusGeoapifyAutocomplete', $config );
+		wp_localize_script( 'geoapify-autocomplete-frontend', 'GeoapifyAutocompleteConfig', $config );
 	}
 }

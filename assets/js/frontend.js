@@ -2,7 +2,7 @@
  * Frontend address autocomplete powered by Geoapify.
  */
 (function () {
-  const cfg = window.GuisfusGeoapifyAutocomplete;
+  const cfg = window.GeoapifyAutocompleteConfig;
   if (!cfg || !cfg.apiKey) return;
 
   const i18n = cfg.i18n || {};
@@ -191,12 +191,12 @@
       getZipEl = () => (target.zipSel ? querySelector(target.zipSel) : null);
     }
 
-    if (addressEl.dataset.guisfusGeoapifyBound === "1") return true;
-    addressEl.dataset.guisfusGeoapifyBound = "1";
+    if (addressEl.dataset.geoapifyAutocompleteBound === "1") return true;
+    addressEl.dataset.geoapifyAutocompleteBound = "1";
 
     bindGlobalListeners();
 
-    const dropdownId = "guisfus-geoapify-listbox-" + Math.random().toString(36).slice(2);
+    const dropdownId = "geoapify-listbox-" + Math.random().toString(36).slice(2);
     const dropdown = document.createElement("div");
     dropdown.className = "gaa-dropdown";
     dropdown.id = dropdownId;

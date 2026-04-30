@@ -2,7 +2,7 @@
 /**
  * Plugin settings storage and sanitization.
  *
- * @package GuisfusGeoapifyAutocomplete
+ * @package GeoapifyAutocomplete
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -17,7 +17,7 @@ final class GAA_Settings {
 	/**
 	 * Option key used in wp_options.
 	 */
-	public const OPTION_KEY = 'guisfus_geoapify_autocomplete_settings';
+	public const OPTION_KEY = 'geoapify_autocomplete_settings';
 
 	/**
 	 * Get default settings.

@@ -1,4 +1,4 @@
-# Guisfus Geoapify Autocomplete
+# Geoapify Autocomplete
 
 A lightweight WordPress plugin that adds Geoapify-powered address autocomplete to existing forms and automatically fills city, state and postal code fields.
 
@@ -19,9 +19,9 @@ A lightweight WordPress plugin that adds Geoapify-powered address autocomplete t
 
 ## Installation
 
-1. Upload the plugin folder to `/wp-content/plugins/guisfus-geoapify-autocomplete`.
-2. Activate **Guisfus Geoapify Autocomplete** in WordPress.
-3. Go to **Settings > Guisfus Geoapify**.
+1. Upload the plugin folder to `/wp-content/plugins/geoapify-autocomplete`.
+2. Activate **Geoapify Autocomplete** in WordPress.
+3. Go to **Settings > Geoapify**.
 4. Add your Geoapify API key.
 5. Restrict the API key by HTTP referrer/domain in Geoapify before using it in production.
 
@@ -55,7 +55,7 @@ For production websites, restrict your Geoapify API key by allowed HTTP referrer
 The frontend configuration can be customized with:
 
 ```php
-add_filter( 'guisfus_geoapify_autocomplete_public_config', function ( $config, $settings ) {
+add_filter( 'geoapify_autocomplete_public_config', function ( $config, $settings ) {
     $config['countryCode'] = 'es';
     return $config;
 }, 10, 2 );

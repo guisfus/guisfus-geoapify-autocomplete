@@ -2,14 +2,14 @@
 /**
  * Main plugin bootstrap.
  *
- * @package GuisfusGeoapifyAutocomplete
+ * @package GeoapifyAutocomplete
  */
 
 defined( 'ABSPATH' ) || exit;
 
-require_once GUISFUS_GEOAPIFY_AUTOCOMPLETE_PATH . 'includes/class-gaa-settings.php';
-require_once GUISFUS_GEOAPIFY_AUTOCOMPLETE_PATH . 'includes/admin/class-gaa-admin.php';
-require_once GUISFUS_GEOAPIFY_AUTOCOMPLETE_PATH . 'includes/public/class-gaa-public.php';
+require_once GEOAPIFY_AUTOCOMPLETE_PATH . 'includes/class-gaa-settings.php';
+require_once GEOAPIFY_AUTOCOMPLETE_PATH . 'includes/admin/class-gaa-admin.php';
+require_once GEOAPIFY_AUTOCOMPLETE_PATH . 'includes/public/class-gaa-public.php';
 
 /**
  * Main plugin class.
