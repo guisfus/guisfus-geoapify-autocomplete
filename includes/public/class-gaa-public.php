@@ -37,18 +37,23 @@ final class GAA_Public {
 			return;
 		}
 
+		$frontend_css_path = GEOAPIFY_AUTOCOMPLETE_PATH . 'assets/css/frontend.css';
+		$frontend_css_ver  = file_exists( $frontend_css_path ) ? (string) filemtime( $frontend_css_path ) : GEOAPIFY_AUTOCOMPLETE_VERSION;
+		$frontend_js_path  = GEOAPIFY_AUTOCOMPLETE_PATH . 'assets/js/frontend.js';
+		$frontend_js_ver   = file_exists( $frontend_js_path ) ? (string) filemtime( $frontend_js_path ) : GEOAPIFY_AUTOCOMPLETE_VERSION;
+
 		wp_enqueue_style(
 			'geoapify-autocomplete-frontend',
 			GEOAPIFY_AUTOCOMPLETE_URL . 'assets/css/frontend.css',
 			array(),
-			GEOAPIFY_AUTOCOMPLETE_VERSION
+			$frontend_css_ver
 		);
 
 		wp_enqueue_script(
 			'geoapify-autocomplete-frontend',
 			GEOAPIFY_AUTOCOMPLETE_URL . 'assets/js/frontend.js',
 			array(),
-			GEOAPIFY_AUTOCOMPLETE_VERSION,
+			$frontend_js_ver,
 			true
 		);
 

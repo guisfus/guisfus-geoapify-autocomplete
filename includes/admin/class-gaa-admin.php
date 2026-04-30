@@ -32,6 +32,8 @@ final class GAA_Admin {
 	 * Register the plugin option.
 	 */
 	public function register_settings() {
+		add_filter( 'option_page_capability_geoapify_autocomplete_group', array( $this, 'settings_capability' ) );
+
 		register_setting(
 			'geoapify_autocomplete_group',
 			GAA_Settings::OPTION_KEY,
@@ -40,6 +42,13 @@ final class GAA_Admin {
 				'sanitize_callback' => array( $this->settings, 'sanitize' ),
 			)
 		);
+	}
+
+	/**
+	 * Return the capability required to save plugin settings.
+	 */
+	public function settings_capability() {
+		return 'manage_options';
 	}
 
 	/**
@@ -85,18 +94,23 @@ final class GAA_Admin {
 			return;
 		}
 
+		$admin_css_path = GEOAPIFY_AUTOCOMPLETE_PATH . 'assets/css/admin.css';
+		$admin_css_ver  = file_exists( $admin_css_path ) ? (string) filemtime( $admin_css_path ) : GEOAPIFY_AUTOCOMPLETE_VERSION;
+		$admin_js_path  = GEOAPIFY_AUTOCOMPLETE_PATH . 'assets/js/admin.js';
+		$admin_js_ver   = file_exists( $admin_js_path ) ? (string) filemtime( $admin_js_path ) : GEOAPIFY_AUTOCOMPLETE_VERSION;
+
 		wp_enqueue_style(
 			'geoapify-autocomplete-admin',
 			GEOAPIFY_AUTOCOMPLETE_URL . 'assets/css/admin.css',
 			array(),
-			GEOAPIFY_AUTOCOMPLETE_VERSION
+			$admin_css_ver
 		);
 
 		wp_enqueue_script(
 			'geoapify-autocomplete-admin',
 			GEOAPIFY_AUTOCOMPLETE_URL . 'assets/js/admin.js',
 			array(),
-			GEOAPIFY_AUTOCOMPLETE_VERSION,
+			$admin_js_ver,
 			true
 		);
 
@@ -153,7 +167,7 @@ final class GAA_Admin {
 							<th scope="row"><?php esc_html_e( 'Geoapify API key', 'geoapify-autocomplete' ); ?></th>
 							<td>
 								<input class="regular-text" type="text" autocomplete="off" spellcheck="false" name="<?php echo esc_attr( GAA_Settings::OPTION_KEY ); ?>[api_key]" value="<?php echo esc_attr( $settings['api_key'] ); ?>">
-								<p class="description"><?php esc_html_e( 'Restrict this key by HTTP referrer in Geoapify before using it on production websites.', 'geoapify-autocomplete' ); ?></p>
+								<p class="description"><?php esc_html_e( 'This key is sent to the browser. Restrict it by HTTP referrer/domain in Geoapify before using it on production websites.', 'geoapify-autocomplete' ); ?></p>
 							</td>
 						</tr>
 

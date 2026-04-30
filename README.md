@@ -50,6 +50,22 @@ This plugin calls Geoapify from the browser, so the API key is intentionally exp
 
 For production websites, restrict your Geoapify API key by allowed HTTP referrers/domains in the Geoapify dashboard.
 
+Additional security notes:
+
+- Only users with `manage_options` can edit plugin settings.
+- Settings are saved through the WordPress Settings API and sanitized before storage.
+- Field mappings accept plain HTML IDs from the admin screen.
+- HTML data attributes are read from frontend markup and used as CSS selectors only after guarded `querySelector()` calls.
+- Suggestions are rendered with `textContent`, not HTML injection.
+- The plugin does not create AJAX endpoints, REST routes, cookies, user tracking, or server-side external requests.
+
+## Frontend Footprint
+
+- Loads `assets/css/frontend.css` and `assets/js/frontend.js` only when an API key is configured.
+- Exposes `window.GeoapifyAutocompleteConfig` with public autocomplete settings.
+- Adds dropdown/status elements to `document.body` while autocomplete fields are active.
+- Marks bound address inputs with `data-geoapify-autocomplete-bound="1"` to avoid duplicate bindings.
+
 ## Developer Filter
 
 The frontend configuration can be customized with:

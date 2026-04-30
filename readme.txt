@@ -14,6 +14,8 @@ Adds Geoapify-powered address autocomplete to WordPress forms and fills city, st
 
 Geoapify Autocomplete adds address suggestions to existing WordPress forms without requiring a specific form plugin.
 
+The Geoapify API key is sent to the browser because autocomplete requests are made client-side. Restrict the key by HTTP referrer/domain in Geoapify before using it in production.
+
 It works with form builders and plain HTML forms as long as the address field can be identified by an ID or by data attributes.
 
 Features:
@@ -53,6 +55,10 @@ The Geoapify API key is sent to the browser because autocomplete requests are ma
 
 For production websites, restrict the key in your Geoapify dashboard by allowed HTTP referrers/domains.
 
+Only users with the `manage_options` capability can access and save plugin settings. Settings are saved through the WordPress Settings API and sanitized before storage.
+
+The plugin does not create AJAX endpoints, REST routes, cookies, user tracking, or server-side external requests. Suggestions are rendered as text, not injected HTML.
+
 == Frequently Asked Questions ==
 
 = Do I need a Geoapify API key? =
@@ -66,6 +72,10 @@ Yes. You can add multiple field mappings from the settings screen or use data at
 = Does it slow down my site? =
 
 Frontend assets load only when an API key is configured, and requests are only made after the user types enough characters in a mapped address field.
+
+= Is the Geoapify API key secret? =
+
+No. Browser-based autocomplete requires the key to be available client-side. Restrict it by allowed HTTP referrers/domains in Geoapify.
 
 == Changelog ==
 
