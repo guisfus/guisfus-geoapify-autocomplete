@@ -36,7 +36,8 @@ geoapify-autocomplete.zip
     |-- includes/
     |-- assets/
     |-- README.md
-    `-- readme.txt
+    |-- readme.txt
+    `-- LICENSE
 ```
 
 Do not install it as:
@@ -115,4 +116,4 @@ add_filter( 'geoapify_autocomplete_public_config', function ( $config, $settings
 
 ## License
 
-GPL-2.0-or-later.
+Geoapify Autocomplete is licensed under GPL-2.0-or-later. See the `LICENSE` file for details.
